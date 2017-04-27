@@ -1,3 +1,5 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/thankyou": "thankyou.xml",
+	"/video": "dialog_video"
 }
