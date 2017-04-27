@@ -17,7 +17,7 @@
 						text_id="header"
 						/>
 					<a
-						href="'tel:'.urlencode(Language::getText('phone1'))"
+						href="'tel:'.urlencode(Language::get_text('phone1'))"
 						cms:eval="href"
 						class="phone"
 						>
@@ -31,7 +31,7 @@
 				<header>
 					<div class="menu">
 						<a
-							href="'tel:'.urlencode(Language::getText('phone'))"
+							href="'tel:'.urlencode(Language::get_text('phone'))"
 							cms:eval="href"
 							class="phone"
 							>
@@ -41,7 +41,7 @@
 					<h1><cms:text constant="header_title"/></h1>
 					<p><cms:text constant="header_desc"/></p>
 					<a
-						href="'tel:'.urlencode(Language::getText('phone1'))"
+						href="'tel:'.urlencode(Language::get_text('phone1'))"
 						cms:eval="href"
 						class="phone"
 						>
