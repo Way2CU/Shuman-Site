@@ -15,7 +15,7 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="header"
+						text_id="header_b"
 					/>
 					<a
 						href="'tel:'.urlencode(Language::getText('phone1'))"
@@ -23,7 +23,7 @@
 						class="phone"
 						>
 						<span><cms:text constant="phone_title"/></span>
-						<span><cms:text constant="phone1"/></span>
+						<cms:text constant="phone1"/>
 					</a>
 				</header>
 			</cms:desktop>
@@ -47,7 +47,7 @@
 						class="phone"
 						>
 						<span><cms:text constant="phone_title"/></span>
-						<span><cms:text constant="phone1"/></span>
+						<cms:text constant="phone1"/>
 					</a>
 				</header>
 			</cms:mobile>
@@ -66,7 +66,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="procedure_article"
+					text_id="procedure_article_b"
 					template="parts/article.xml"
 					/>
 
@@ -83,7 +83,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="about_article"
+					text_id="about_article_b"
 					template="parts/article_heading.xml"
 					/>
 
@@ -91,7 +91,7 @@
 				<cms:module
 					name="articles"
 					action="show_group"
-					text_id="treatment_group"
+					text_id="treatment_group_b"
 					template="parts/show_articles.xml"
 
 				/>
@@ -104,7 +104,7 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="footer_article"
+						text_id="footer_article_b"
 						template="parts/article.xml"
 						/>
 
@@ -121,7 +121,7 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="footer_article"
+						text_id="footer_article_b"
 						template="parts/article.xml"
 						/>
 
