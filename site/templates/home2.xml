@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title>שאיבת שומן בודי טייט</title>
+			<title><cms:text constant="site_title"/></title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -16,7 +15,7 @@
 						name="articles"
 						action="show"
 						text_id="header_b"
-					/>
+						/>
 					<a
 						href="'tel:'.urlencode(Language::getText('phone1'))"
 						cms:eval="href"
@@ -71,13 +70,12 @@
 					/>
 
 				<div class="video_container">
-						<cms:module
-							name="youtube"
-							action="show"
-							text_id="optimal_video"
-							template="parts/video.xml"
-							/>
-
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="optimal_video"
+						template="parts/video.xml"
+						/>
 				</div>
 
 				<cms:module
@@ -86,17 +84,12 @@
 					text_id="about_article_b"
 					template="parts/article_heading.xml"
 					/>
-
-
 				<cms:module
 					name="articles"
 					action="show_group"
 					text_id="treatment_group_b"
 					template="parts/show_articles.xml"
-
-				/>
-
-
+					/>
 			</div>
 
 			<cms:desktop>
@@ -140,7 +133,6 @@
 			<footer>
 				<span><cms:text constant="copyright"/></span>
 			</footer>
-
 		</body>
 	</html>
 </document>

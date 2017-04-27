@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
@@ -11,13 +10,13 @@
 
 		<body>
 			<cms:raw file="parts/gtm.txt"/>
-				<header class="thankyou">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="thankyou"
+			<header class="thankyou">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="thankyou"
 					/>
-				</header>
+			</header>
 			<footer>
 				<span><cms:text constant="copyright"/></span>
 			</footer>
