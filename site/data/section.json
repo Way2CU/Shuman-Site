@@ -1,5 +1,5 @@
 {
 	"/": "home.xml",
 	"/thankyou": "thankyou.xml",
-	"/video": "dialog_video"
+	"/video/{n:video_id}": "dialog_video"
 }
