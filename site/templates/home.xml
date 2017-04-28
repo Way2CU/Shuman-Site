@@ -23,7 +23,7 @@
 							cms:eval="href"
 							class="phone"
 							>
-							<cms:svg file="icons/icon-phone-green.svg"/>
+							<cms:svg file="icon-phone-green.svg"/>
 						</a>
 					</div>
 				</cms:mobile>

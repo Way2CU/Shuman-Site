@@ -27,12 +27,13 @@
 	display: block;
 	padding-left: 15px;
 	padding-right: 15px;
-	text-align: center;
 	background-image: url(../images/mobile-header-background.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 100% auto;
-	min-height: 240px;
+	background-color: white;
+	margin-top: 60px;
+	padding: 0 0.5em;
 }
 
 header.thankyou {
@@ -74,10 +75,10 @@ header h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin: 0px;
-	margin-top:70px;
+	margin-top:30px;
 	font-size: 1.5em;
 	color: #1b4868;
-	font-weight: 300;
+	font-weight: 700;
 	line-height: 1.2em;
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -109,16 +110,6 @@ header > a.phone {
 	box-shadow: 3px 3px 2px rgba(213, 189, 189, 0.3);
 	border-radius: 8px;
 	position: relative;
-}
-
-header > a.phone:hover {
-	background-color: #75cb1d;
-}
-
-
-header > a.phone span {
-	display: block;
-	font-size: 1em;
 }
 
 a.phonenum {
@@ -218,7 +209,6 @@ form div.controls button {
 	color:white;
 	border:none;
 	border:1px solid transparent;
-	border-radius: 10px;
 	width: 140px;
 	cursor: pointer;
 	transition:all 0.3s;
@@ -246,6 +236,197 @@ form div.controls button:hover {
 :-ms-input-placeholder {
    color: #94a4a5;
    font-weight: 300;
+}
+
+header {
+ 	display: block;
+ 	background-color:#e0ecf7;
+ 	background-image: url(../images/mobile_new_header.jpg);
+ 	background-repeat: no-repeat;
+ 	background-position: center bottom;
+ 	background-size: 100% auto;
+ 	background-color: white;
+ 	margin-top: 60px;
+ 	padding: 0 0.5em;
+}
+
+ header div.floating_header {
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+	height: 60px;
+	z-index: 1000;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+	text-align: center;
+	background-color: white;
+}
+
+header div.floating_header a.logo {
+	display: block;
+	margin: 0 auto;
+	padding-top: 0.5em;
+}
+
+header div.floating_header a.logo svg {
+	width: 100px;
+}
+
+header div.floating_header a.phone {
+	position: absolute;
+	left: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+header div.floating_header a.phone svg {
+	width: 2em;
+	height: 2em;
+}
+
+header div.header_information {
+	padding-top: 1em;
+	padding-bottom: 100vw;
+	margin-bottom: 5em;
+}
+
+header div.header_information a.logo {
+	text-align: center;
+	display: block;
+}
+
+header div.header_information a.logo svg {
+	width: 50vw;
+}
+
+header div.header_information article {
+	display: block;
+	text-align: center;
+}
+
+header article h1 {
+	display: block;
+	font-size: 1.8em;
+	padding-bottom: 0px;
+}
+
+header article h2 {
+	display: block;
+	padding-top: 0px;
+	font-weight: 400;
+}
+
+header article p {
+	display: block;
+	padding-top: 0px;
+	font-size: 1em;
+}
+
+header article p strong {
+	display: block;
+}
+
+header div.header_information a span {
+	display: block;
+	font-size: 0.4em;
+	padding: 0;
+}
+
+header div.header_information a.phone {
+	background: linear-gradient(180deg, #00aeef, #0095cc);
+	display: block;
+	margin: 1em auto;
+	width: 80vw;
+	text-decoration: none;
+	color: white;
+	padding: 0em 4vw 2vw 4vw;
+	font-weight: 700;
+	text-align: center;
+	font-size: 2.2em;
+	border-radius: 6px;
+}
+
+div.form_container {
+	box-sizing: border-box;
+}
+
+div.form_container h2 {
+	color: black;
+	font-weight: 400;
+	padding-bottom: 1em;
+	margin-right: 4vw;
+	font-size: inherit;
+}
+
+div.form_container form {
+	box-sizing: border-box;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+div.form_container form label:first-of-type {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+div.form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin-left: 0;
+	margin-right: auto;
+	border: 1px solid #00aeef;
+	background-color: white;
+	border-bottom: none;
+}
+
+div.form_container form label input {
+	box-sizing: border-box;
+	padding: 1em;
+	margin-right: 1em;
+	width: 85%;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: transparent;
+	border: 1px solid transparent;
+	transition: all 0.3s;
+}
+
+div.form_container form label input:focus {
+	box-shadow: inset 0px 0px 3px #0095cc;
+}
+
+div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 10%;
+	margin-right: 5%;
+	padding: 0;
+	color: black;
+}
+
+div.form_container div.controls {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin-left: 0;
+	margin-right: auto;
+	padding: 0;
+}
+
+div.form_container div.controls button {
+	width: 100%;
+	text-align: center;
+	background: linear-gradient(180deg, #00aeef, #0095cc);
+	height: 60px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	font-weight: 700;
+	transition: all 0.3s;
 }
 
 /*Procedure */
