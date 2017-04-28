@@ -9,57 +9,62 @@
 
 		<body>
 			<cms:raw file="parts/gtm.txt"/>
-			<cms:desktop>
-				<header>
+			<header>
+				<cms:mobile>
+					<div class="floating_header">
+						<!-- Logo -->
+						<a href="#top" class="logo">
+							<cms:svg file="logo.svg" />
+						</a>
+
+						<!-- Phone link -->
+						<a
+							href="'tel:'.urlencode(Language::get_text('phone1'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<cms:svg file="icons/icon-phone-green.svg"/>
+						</a>
+					</div>
+				</cms:mobile>
+
+				<!-- Main header information -->
+				<div class="header_information">
+					<a href="#top" class="logo">
+						<cms:svg file="logo.svg" />
+					</a>
+
 					<cms:module
 						name="articles"
 						action="show"
 						text_id="header"
-						/>
+						template="stock/article_generic.xml"
+						>
+						<param name="title_tag" value="h1"/>
+						<param name="title" value=""/>
+					</cms:module>
+
+					<!-- Phone link -->
 					<a
 						href="'tel:'.urlencode(Language::get_text('phone1'))"
 						cms:eval="href"
 						class="phone"
 						>
 						<span><cms:text constant="phone_title"/></span>
-						<span><cms:text constant="phone1"/></span>
+						<cms:text constant="phone1"/>
 					</a>
-				</header>
-			</cms:desktop>
 
-			<cms:mobile>
-				<header>
-					<div class="menu">
-						<a
-							href="'tel:'.urlencode(Language::get_text('phone'))"
-							cms:eval="href"
-							class="phone"
-							>
-						</a>
+					<!-- Contact form -->
+					<div class="form_container">
+						<h2><cms:text constant="form_title"/></h2>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
 					</div>
-
-					<h1><cms:text constant="header_title"/></h1>
-					<p><cms:text constant="header_desc"/></p>
-					<a
-						href="'tel:'.urlencode(Language::get_text('phone1'))"
-						cms:eval="href"
-						class="phone"
-						>
-						<span><cms:text constant="phone_title"/></span>
-						<span><cms:text constant="phone1"/></span>
-					</a>
-				</header>
-			</cms:mobile>
-
-			<div class="form_wrap">
-				<h3><cms:text constant="form_title"/></h3>
-				<cms:module
-					name="contact_form"
-					action="show"
-					text_id="contact_form"
-					/>
-
-			</div>
+				</div>
+			</header>
 
 			<div class="procedure">
 				<cms:module
