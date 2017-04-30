@@ -56,7 +56,6 @@ a.phone {
 	padding-left: 30px;
 	padding-right: 30px;
 	background: linear-gradient(0deg, rgba(22, 166, 30, 1) 0%, rgba(118, 204, 30, 1) 100%);
-	border: 1px solid #15a51d;
 	text-decoration: none;
 	font-size: 2.2em;
 	color: white;
@@ -88,7 +87,8 @@ form label {
 form label:before {
 	content:"";
 	position: absolute;
-	top:0px;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 0px;
 	background-image: url(../images/form-icons-sprite.svg);
 	background-repeat: no-repeat;
@@ -110,11 +110,17 @@ form label:nth-of-type(4):before {
 	background-position: -150px 0px;
 }
 
+form label span {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 40px;
+}
 
 form label input {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	padding-right: 40px;
+	padding-right: 90px;
 	font-size: 1.2em;
 	font-weight: 300;
 	color: #94a4a5;

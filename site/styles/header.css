@@ -45,6 +45,11 @@ header div.header_information a.phone {
 	margin: 1em auto;
 	padding: 0.5em 1em;
 	width: 43%;
+	transition: all 0.3s;
+}
+
+header div.header_information a.phone:hover {
+	background: linear-gradient(180deg, #0095cc, #00aeef);
 }
 
 header div.header_information a.phone span {
@@ -65,13 +70,13 @@ div.form_container h2 {
 	padding-bottom: 1em;
 }
 
-div.form_container form {
+header div.header_information div.form_container form {
 	box-sizing: border-box;
 	padding: 0em 60px;
 	width: 500px;
 }
 
-div.form_container form label {
+header div.header_information div.form_container form label {
 	display: block;
 	width: 80%;
 	box-sizing: border-box;
@@ -80,37 +85,49 @@ div.form_container form label {
 	border: 1px solid #00aeef;
 	background-color: white;
 	border-bottom: none;
+	position: relative;
 }
 
-div.form_container form label:first-of-type {
+header div.header_information div.form_container form label:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+
+header div.header_information div.form_container form label:first-of-type {
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
 }
 
-div.form_container form label input {
+header div.header_information div.form_container form label input {
 	box-sizing: border-box;
-	width: 85%;
+	width: 100%;
 	display: inline-block;
 	vertical-align: middle;
 	background-color: transparent;
 	border: 1px solid transparent;
 	transition: all 0.3s;
+	padding-right: 90px;
 }
 
-div.form_container form label input:hover,
-div.form_container form label input:focus {
-	box-shadow: inset 0px 0px 3px #0095cc
+header div.header_information div.form_container form label input:hover,
+header div.header_information div.form_container form label input:focus {
+	box-shadow: inset 0px 0px 3px #0095cc;
+
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
 }
 
-div.form_container form label span {
+header div.header_information div.form_container form label span {
 	display: inline-block;
 	vertical-align: middle;
-	width: 15%;
-	padding: 0;
+	width: 50px;
 	color: black;
 }
 
-div.form_container div.controls {
+header div.header_information div.form_container div.controls {
 	display: block;
 	width: 80%;
 	box-sizing: border-box;
@@ -119,19 +136,19 @@ div.form_container div.controls {
 	padding: 0;
 }
 
-div.form_container div.controls button {
+header div.header_information div.form_container div.controls button {
 	width: 100%;
 	text-align: center;
 	background: linear-gradient(180deg, #00aeef, #0095cc);
 	height: 60px;
 	border-top-right-radius: 0px;
 	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
 	font-weight: 700;
 	transition: all 0.3s;
 }
 
-div.form_container div.controls button:hover {
+header div.header_information div.form_container div.controls button:hover {
 	background: linear-gradient(0deg, #00aeef, #0095cc);
 }
