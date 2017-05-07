@@ -49,26 +49,18 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 function dialog() {
-	// calling the dialog.
-	var video_dialog = new Dialog();
-
-	// Modify the dialog.
-
-	video_dialog.setTitle(language_handler.getText(null, 'dialog_video_title'));
-	video_dialog.setSize(550, 366);
-	//video_dialog.setContentFromURL($('a.youtube').attr('href'));
-	//video_dialog.setClearOnClose(true);
-	//video_dialog.show();
-	//video_dialog.showWhenReady();
+	var video_dialog = new Caracal.Dialog();
+	video_dialog.set_title(language_handler.getText(null, 'dialog_video_title'));
+	video_dialog.set_size(550, 366);
 
 	$('a.youtube').not('.mobile').click(function(event) {
 		// prevent link from working.
 		event.preventDefault();
 
 		// set content from URL and show it.
-		video_dialog.setContentFromURL($(this).attr('href'));
-		video_dialog.showWhenReady();
-		video_dialog.setClearOnClose(true);
+		video_dialog.set_content_from_url($(this).attr('href'));
+		video_dialog.open_when_ready();
+		video_dialog.set_clear_on_close(true);
 	});
 }
 
