@@ -4,7 +4,7 @@
 	<cms:module
 		name="youtube"
 		action="show"
-		id="$_REQUEST['id']"
+		id="$_REQUEST['video_id']"
 		embed="1"
 		width="550"
 		height="366"
