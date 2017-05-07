@@ -70,22 +70,26 @@ function dialog() {
 		video_dialog.showWhenReady();
 		video_dialog.setClearOnClose(true);
 	});
-
 }
 
 Site.on_load = function() {
-	if (!Site.is_mobile()){
+	if (!Site.is_mobile())
 		dialog();
-	}
+
 	var thankyou = "/thankyou" + window.location.search;
+
 	// handle analytics event
-	$('form').on('analytics-event', function(event, data) {
+	var handle_submit = function(data) {
 		if (!data.error)
-			dataLayer.push({
-				'event':'leadSent'
-			});
+			dataLayer.push({'event': 'leadSent'});
 		window.location.replace(thankyou);
-	});
+		return true;
+	};
+
+	for (var i=0, count=Caracal.ContactForm.list.count; i<count; i++) {
+		var form = Caracal.ContactForm.list[i];
+		form.events.connect('submit-success', handle_submit);
+	}
 };
 
 
