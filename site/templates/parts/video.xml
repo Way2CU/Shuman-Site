@@ -3,7 +3,7 @@
 		<p><cms:var param="title" multilanguage="yes"/></p>
 		<a
 			class="youtube"
-			href="URL::make(array('video_id', $params['id']))"
+			href="URL::make(array('video_id' => $params['id']))"
 			title="$params['title'][$language]"
 			cms:eval="href,title"
 			>
